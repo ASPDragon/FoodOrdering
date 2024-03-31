@@ -7,7 +7,19 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "prettier": "prettier '@/**/*.js'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.tsx": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "jest-expo"
@@ -28,14 +40,18 @@
     "react-native": "0.73.6",
     "react-native-safe-area-context": "4.8.2",
     "react-native-screens": "~3.29.0",
-    "react-native-web": "~0.19.6"
+    "react-native-web": "~0.19.6",
+    "expo-crypto": "~12.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.45",
     "babel-preset-expo": "^10.0.1",
+    "husky": "^9.0.11",
     "jest": "^29.2.1",
     "jest-expo": "~50.0.4",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
     "react-test-renderer": "18.2.0",
     "typescript": "^5.1.3"
   },
