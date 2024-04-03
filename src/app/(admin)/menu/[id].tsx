@@ -20,7 +20,7 @@ const ProductDetailsScreen = () => {
         if (!product) return;
         addItem(product, selectedSize);
         router.push('/cart');
-    }
+    };
 
     if (!product)
         return <Text>Product not found</Text>;
