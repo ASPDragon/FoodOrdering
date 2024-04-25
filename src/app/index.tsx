@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import React from 'react';
-import Button from '../components/Button';
+import Button from '@components/Button';
 import { Link } from 'expo-router';
 
 const index = () => {
@@ -11,6 +11,9 @@ const index = () => {
             </Link>
             <Link href={'/(admin)'} asChild>
                 <Button text="Admin" />
+            </Link>
+            <Link href={'/sign-in'} asChild>
+                <Button text="Sign in" />
             </Link>
         </View>
     );
