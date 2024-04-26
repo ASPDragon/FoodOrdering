@@ -1,8 +1,9 @@
-import {FlatList, StyleSheet} from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 import products from '@assets/data/products';
 import ProductListItem from '@components/ProductListItem';
+import {memo} from "react";
 
-export default function MenuScreen() {
+ const MenuScreen = () => {
     return (
         <FlatList data={products}
                   renderItem={({item}) => <ProductListItem product={item}/>}
@@ -22,3 +23,5 @@ const styles = StyleSheet.create({
         gap: 10,
     }
 });
+
+ export default memo(MenuScreen);
