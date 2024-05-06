@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet } from 'react-native';
 import products from '@assets/data/products';
 import ProductListItem from '@components/ProductListItem';
-import {memo} from "react";
+import { memo } from "react";
 
  const MenuScreen = () => {
     return (
